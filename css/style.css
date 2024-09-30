@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.user-wlc{
+    /* width: 25%; */
+    text-align: center;
+}
+#categ-group li{
+    cursor: pointer;
+}
+.main-sec{
+    margin: 80px -15% 0 20%;
+}
+.cart-sec{
+    margin: 140px 5%;
+}
+.val-show{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+#val-show-h1{
+    width: 50%;
+    margin-left: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: linear-gradient(to right, blue, purple);
+    transform: translate(-52.5%, -50%)    ;
+    -webkit-transform: translate(-52.5%, -50%)    ;
+    -moz-transform: translate(-52.5%, -50%)    ;
+    -ms-transform: translate(-52.5%, -50%)    ;
+    -o-transform: translate(-52.5%, -50%)    ;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#cart-product-sec{
+    padding-top: 70px;
+}
+#product-data{
+    margin: 100px 15%;
+}
+.card-item{
+    width: 32%;
+}
+.card-body h5{
+    height: 100px;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.prod-desc{
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-item{
+    transition: 0.50s;
+    -webkit-transition: 0.50s;
+    -moz-transition: 0.50s;
+    -ms-transition: 0.50s;
+    -o-transition: 0.50s;
+}
+.card-item:hover {
+    border: 1px double black;
+    background-color: rgba(0, 0, 0, 0.20)
+}
+.card-item:hover::before {
+    height: 100%;
+    width: 100%;
+}
+#login-form, #signup-form{
+    margin: 100px 20%;
+    padding: 50px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+#login-form label, #signup-form label{
+    color: white;
+}
+aside{
+    position: fixed;
+}
+
+
+@media(max-width: 1000px){
+    .card-item{
+        width: 46%;
+    }
+    #login-form, #signup-form{
+        margin: 100px 5%;
+        padding: 50px 30px;
+    }
+}
+@media(max-width: 767px){
+    .card-item{
+        width: 94%;
+    }
+    #product-data{
+        margin: 100px 5%;
+    }
+    .main-sec{
+        margin: 0 auto;
+    }
+    aside{
+        margin: 80px 0 50px 0;
+        position: static;
+    }
+    .cart-sec{
+        margin: 140px 0;
+    }
+    #val-show-h1{
+        width: 100%;
+    }
+    #login-form, #signup-form{
+        margin: 100px 2%;
+        padding: 50px 15px;
+    }
+}

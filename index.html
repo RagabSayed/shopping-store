@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping Cart</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-md-5 w-25" href="#">Navbar</a>
+          <ul class="navbar-nav user-wlc mb-2 mb-lg-0 text-light fs-4 fw-bold">
+            <li class="nav-item mx-2" id="welc-user"></li>
+        </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item mx-2" id="login">
+                <a class="nav-link" href="/login.html">Log In</a>
+              </li>
+                <li class="nav-item mx-2" id="logout" style="display: none">
+                    <a class="nav-link" href="#" onclick="handelLogout()">Log Out</a>
+                </li>
+              <li class="nav-item mx-2" id="signup">
+                <a class="nav-link" href="/signup.html" >Sign Up</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav d-flex text-light fs-3 me-md-5">
+              <li class="nav-item me-md-5" id="cart">
+                <a class="nav-link d-inline-block" href="/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <span class="text-light" id="cart-quntity"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <aside class="col-md-3 container">
+          <button type="button" class="btn btn-dark fw-bold fs-4 py-2 w-100"  data-bs-toggle="collapse" data-bs-target="#categ-group">
+          Group By Category
+          </button>
+          <ul id="categ-group" class="collapse category-html ps-5">
+
+          </ul>
+          <button type="button" class="btn btn-dark fw-bold fs-4 py-2 mt-4 w-100"  data-bs-toggle="collapse" data-bs-target="#price-group" onclick="filterByPrice()">
+            Group By Price
+            </button>
+            <form id="price-group" class="collapse price-html row ps-5">
+              <div class="col">
+                <label for="strPrice" class="form-label fs-5 fw-bold">From Price:</label>
+                <input type="number" class="form-control fs-5 fw-bold" placeholder="Start" name="strPrice" id="start-price" value="">
+              </div>
+              <div class="col">
+                <label for="endPrice" class="form-label fs-5 fw-bold">To Price:</label>
+                <input type="number" class="form-control fs-5 fw-bold" placeholder="End" name="endPrice" id="end-price" value="">
+              </div>
+              <button id="search-btn" type="button" class="btn btn-primary btn-lg my-3" onclick="priceFilter()">Search</button>
+              <button id="cancel-filter-btn" type="button" class="btn btn-secondary btn-lg my-3" onclick="cancelPriceFilter()" style="display:none">All Products</button>
+            </form>
+      </aside>
+      <section class="container col-12 col-md-9 ">
+          <div class="main-sec">
+            
+            <div class="row justify-content-around" id="product-sec">
+
+            </div>
+          </div>
+          
+      </section>
+    </section>
+
+
+
+
+   
+    <!-- <script src="./js/bootstrap.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/script.js"></script>
+    <script src= "./js/logout.js"></script>
+    
+    
+</body>
+</html>

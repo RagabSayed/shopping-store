@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-md-5" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item mx-2" id="logout">
+                <a class="nav-link" href="#" >Sign Up</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav d-flex text-light fs-3 me-md-5">
+              <li class="nav-item me-md-5" id="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- /////////////// Log Out Form -->
+      <main>
+        <form action="/action_page.php" id="signup-form" class="bg-dark text-bg-dark">
+            <h2 class="text-light my-5">If you have account, You can log in >> <a href="/login.html" class="text-decoration-none">To Login</a></h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="text" class="form-label">Frist Name:</label>
+                    <input type="text" class="form-control" placeholder="Enter frist name" name="fristName" onchange="handelInputChange(name, value)">
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                    <label for="text" class="form-label">Last Name:</label>
+                    <input type="text" class="form-control" placeholder="Enter last name" name="lastName" onchange="handelInputChange(name, value)">
+                </div>
+              </div>
+            <div class="mb-3 mt-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" onchange="handelInputChange(name, value)">
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Password:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" onchange="handelInputChange(name, value)">
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+          </form>
+      </main>
+
+
+
+
+
+   
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/signup.js"></script>
+</body>
+</html>
